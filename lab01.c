@@ -1,10 +1,29 @@
 #include <stdio.h>
 
-int factorial(int n) {
+__uint128_t factorial(int n) {
     if (n <= 1) {
         return 1;
     }
     return n * factorial(n - 1);
+}
+
+void print_uint128(__uint128_t n) {
+    char buf[50];
+    int i = 0;
+
+    if (n == 0) {
+        putchar('0'); return;
+    }
+
+    while (n > 0) {
+        buf[i] = '0' + (n % 10);
+        n /= 10;
+        i++;
+    }
+
+    while (i--) {
+        putchar(buf[i]);
+    }
 }
 
 int main(void) {
@@ -20,7 +39,7 @@ int main(void) {
         scanf("%d", &L);
     } while (L <= 0 || L > 25);
 
-    double e_x_L = 0;
+    long double e_x_L = 0;
 
     for (int i = 0; i <= a; i++) {
         for (int j = 0; j <= b; j++) {
@@ -36,8 +55,9 @@ int main(void) {
         }
     }
 
-    double result = factorial(L) * e_x_L;
+    __uint128_t result = factorial(L) * e_x_L;
 
-    printf("Number of combinations is: %.0f", result);
+    printf("Number of combinations is: ");
+    print_uint128(result);
     return 0;
 }
