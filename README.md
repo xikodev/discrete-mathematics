@@ -32,4 +32,6 @@ The executable program should print the required result. An example of program o
 113400
 ```
 
+Problem solution: [lab01.c](lab01.c)
+
 ---
