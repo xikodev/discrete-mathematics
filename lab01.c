@@ -11,12 +11,12 @@ int main(void) {
     int a, b, c, d, e, L;
 
     do {
-        printf("Insert a, b, c, d, e:");
+        printf("Insert a, b, c, d, e:\n");
         scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
     } while ((a < 0 || b < 0 || c < 0 || d < 0 || e < 0) && (a > 10 || b > 10 || c > 10 || d > 10 || e > 10));
 
     do {
-        printf("Insert the word length L: ");
+        printf("Insert the word length L:\n");
         scanf("%d", &L);
     } while (L <= 0 || L > 25);
 
