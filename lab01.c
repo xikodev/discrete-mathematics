@@ -39,6 +39,13 @@ int main(void) {
         scanf("%d", &L);
     } while (L <= 0 || L > 25);
 
+    printf("Number of combinations is: ");
+
+    if (L > (a + b + c + d + e)) {
+        printf("0");
+        return 0;
+    }
+
     long double e_x_L = 0;
 
     for (int i = 0; i <= a; i++) {
@@ -57,7 +64,6 @@ int main(void) {
 
     __uint128_t result = factorial(L) * e_x_L;
 
-    printf("Number of combinations is: ");
     print_uint128(result);
     return 0;
 }
