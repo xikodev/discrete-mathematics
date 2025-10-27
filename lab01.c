@@ -1,29 +1,10 @@
 #include <stdio.h>
 
-__uint128_t factorial(int n) {
+long double factorial(int n) {
     if (n <= 1) {
         return 1;
     }
     return n * factorial(n - 1);
-}
-
-void print_uint128(__uint128_t n) {
-    char buf[50];
-    int i = 0;
-
-    if (n == 0) {
-        putchar('0'); return;
-    }
-
-    while (n > 0) {
-        buf[i] = '0' + (n % 10);
-        n /= 10;
-        i++;
-    }
-
-    while (i--) {
-        putchar(buf[i]);
-    }
 }
 
 int main(void) {
@@ -32,12 +13,12 @@ int main(void) {
     do {
         printf("Insert a, b, c, d, e:\n");
         scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
-    } while ((a < 0 || b < 0 || c < 0 || d < 0 || e < 0) && (a > 10 || b > 10 || c > 10 || d > 10 || e > 10));
+    } while ((a < 0 || b < 0 || c < 0 || d < 0 || e < 0) && (a > 10 || b > 10 || c > 10 || d > 10 || e > 10) || 0);
 
     do {
         printf("Insert the word length L:\n");
         scanf("%d", &L);
-    } while (L <= 0 || L > 25);
+    } while ((L <= 0 || L > 25));
 
     printf("Number of combinations is: ");
 
@@ -62,8 +43,7 @@ int main(void) {
         }
     }
 
-    __uint128_t result = factorial(L) * e_x_L;
-
-    print_uint128(result);
+    long double result = factorial(L) * e_x_L;
+    printf("%.0Lf", result);
     return 0;
 }
