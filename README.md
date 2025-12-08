@@ -35,3 +35,47 @@ The executable program should print the required result. An example of program o
 Problem solution: [lab01.c](lab01.c)
 
 ---
+
+## Lab 2
+
+### Problem
+
+For the given graph G, your task is to determine how many subgraphs of the graph G are isomorphic to the
+cycle C3.
+
+Note: It is expected that the program will perform the task for all graphs with no more than 12 vertices.
+
+### Example Input
+
+The executable file of the program should print a prompt for entering the name of the file containing information
+about the graph, and that file should be located in the same folder as the program file. An example of the
+program input (characters marked in red should be entered by the user):
+
+```
+graf.txt
+```
+
+The file graf.txt contains in the first line the number n (the number of vertices of the graph G), and in
+the following n lines the adjacency matrix of the given graph (zeros and ones without spaces). An example of
+the content of a text file with input looks like this:
+
+```
+5
+01100
+10100
+11011
+00101
+00110
+```
+
+### Example Output
+
+The program in the executable file should print the required solution with an appropriate message. An example
+of the program output (characters marked in green are printed by the program, in this case for the given input
+example):
+
+```
+Solution: 2
+```
+
+Problem solution: [lab02.c](lab02.c)
