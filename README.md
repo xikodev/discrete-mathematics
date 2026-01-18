@@ -79,3 +79,49 @@ Solution: 2
 ```
 
 Problem solution: [lab02.c](lab02.c)
+
+---
+
+## Lab 3
+
+### Problem
+
+For a graph G, given by the number of vertices and its adjacency matrix, determine the maximum degree ∆ of
+the vertices of the graph, and examine whether the graph G is ∆-edge-colorable.
+
+### Example Input
+
+In the executable file of the program, a prompt for entering the name of the file containing information about
+the graph should be displayed, and this file should be located in the same folder as the program file. An example
+of the program input (the characters marked in red should be entered manually by the user):
+
+```
+graf.txt
+```
+
+The file graf.txt contains in the first line the number n (the number of vertices of the graph G), and in
+the next n lines the adjacency matrix of the given graph (zeros and ones without spaces). An example of the
+contents of the text file with the input looks like this:
+
+```
+5
+01100
+10100
+11011
+00101
+00110
+```
+
+### Example Output
+
+The program in the executable file should print the corresponding ∆ in one line, and in the next line print 1 if
+the graph is ∆-edge-colorable, or 0 if it is not.
+An example of the program output (the characters marked in green are printed by the program, in this case for
+the given example input):
+
+```
+4
+1
+```
+
+Problem solution: [lab03.c](lab03.c)

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_FILENAME        25
+#define MAX_FILENAME 25
 
 int main() {
     char filename[MAX_FILENAME];
